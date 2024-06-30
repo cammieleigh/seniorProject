@@ -1,0 +1,25 @@
+@model IEnumerable<SeniorProject.Models.Product>
+
+<div class="row">
+    <div class="col-lg-6 col-sm-8">
+        <div class="row">
+@foreach (var item in Model) {
+        <div class="product-container col-sm-4">
+            <div class="col-sm-4">
+                <a asp-action="Show" asp-route-id="@item.Id"><img class ="img-fluid product-img" src='~/Assets/@Html.DisplayFor(modelItem => item.Img)'>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                @Html.DisplayFor(modelItem => item.Name)
+            </div>
+            <div class="col-sm-4">
+                @Html.DisplayFor(modelItem => item.Color)
+            </div>
+            <div class="col-sm-4">
+                @Html.DisplayFor(modelItem => item.Price)
+            </div>
+     </div>
+}
+</div>
+</div>
+</div>

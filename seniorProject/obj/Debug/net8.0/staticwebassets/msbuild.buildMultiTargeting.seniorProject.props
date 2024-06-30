@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\seniorProject.props" />
+</Project>

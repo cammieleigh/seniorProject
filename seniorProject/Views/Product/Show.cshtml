@@ -1,0 +1,26 @@
+@model SeniorProject.Models.Product
+
+        <div class="container col-sm-4">
+            <div class="col-sm-4">
+                @Html.DisplayFor(model => model.Name)
+            </div>
+            <div class="col-sm-4">
+                @Html.DisplayFor(model => model.Price)
+            </div>
+            <div class="col-sm-4">
+                @Html.DisplayFor(model => model.Color)
+            </div>
+            <div class="col-sm-4">
+                @Html.DisplayFor(model => Model.Id)
+            </div>
+            <div class="col-sm-4">
+                <img class ="product-img" src='~/Assets/@Html.DisplayFor(model => model.Img)'>
+            </div>
+     </div>
+<div>
+    <a asp-controller="Account" asp-action="AddToCart" asp-route-Id="@Model.Id">Add to Cart</a> |
+</div>
+
+@section Scripts{
+
+}

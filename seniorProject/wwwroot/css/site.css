@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.main-color{
+  color: #638880;
+  text-decoration: none;
+  font-family: "cutive mono", mono;
+  font-size: 3em;
+}
+
+.header-color{
+  background-color: #E7E3F1;
+}
+
+.main-color:hover{
+ color: #AFA3D5;
+}
+.nav-color{
+  color: #638880;
+}
+.nav-color:hover{
+  color: #AFA3D5;
+}
+
+
+.img-style{
+  display: block;
+  z-index: 1;
+  /* margin: auto; */
+  max-width: 30%;
+  /* border: 2px solid black; */
+  height: auto;
+  border-radius:50% 50% 0px 0px;
+  -webkit-border-radius:50% 50% 0px 0px;
+  -moz-border-radius:50% 50% 0px 0px;
+  -ms-border-radius:50% 50% 0px 0px;
+  -o-border-radius:50% 50% 0px 0px;
+}
+
+.decorative-div{
+  border-radius:50% 50% 0px 0px;
+  background-color: #F1BFC0;
+  width: 25vw;
+  height: 25vw;
+  display: block;
+  align-self: end;
+  margin-left: -50px;
+  align-content: center;
+  text-align: center;
+}
+
+.homeIntro{
+  color: #677D75;
+  font-family: "Montserrat";
+  text-align: center;
+  padding: 15px;
+  width: 60%;
+  margin: 0;
+  margin-left: 60px;
+  font-size: 1.5em;
+}
+
+.product-img{
+  width: 200px;
+  height: auto;
+}
+
+.product-container{
+  background-color:#e7e3f1;
+  color: #2e2c39;
+  font-family: "Montserrat";
+  margin: 20px;
+  font-size: 1.25em;
+  text-align: center;
+}
