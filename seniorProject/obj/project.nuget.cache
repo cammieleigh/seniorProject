@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NMqJDjlOb2sRV2biEhiwAvgNL7aYEFFgbPJCEDhBqBkeYZNN4h0rsx1ggqmyN1N/MGlUPBz00I5vwqgHUABG7A==",
+  "dgSpecHash": "xXq4ZIkcc9G4pMt4vHejjMu97RYrrLjgSPk8pbhQNgrWiWALGOXS0u7AhKQTydkPd9RCHTZCWB+xkgPpj7uslg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\seniorProject.csproj",
+  "projectFilePath": "C:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\seniorProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cammi\\.nuget\\packages\\auth0.aspnetcore.authentication\\1.4.1\\auth0.aspnetcore.authentication.1.4.1.nupkg.sha512",
     "C:\\Users\\cammi\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

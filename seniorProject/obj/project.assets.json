@@ -8393,11 +8393,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\seniorProject.csproj",
+      "projectUniqueName": "C:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\seniorProject.csproj",
       "projectName": "seniorProject",
-      "projectPath": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\seniorProject.csproj",
+      "projectPath": "C:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\seniorProject.csproj",
       "packagesPath": "C:\\Users\\cammi\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\obj\\",
+      "outputPath": "C:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
