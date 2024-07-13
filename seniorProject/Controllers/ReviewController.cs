@@ -5,29 +5,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Carts.Data;
+using Reviews.Data;
 using SeniorProject.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.Extensions.Configuration.UserSecrets;
 
 namespace seniorProject.Controllers
 {
-    public class CartController : Controller
+    public class ReviewController : Controller
     {
-        private readonly CartContext _context;
+        private readonly ReviewContext _context;
 
-        public CartController(CartContext context)
+        public ReviewController(ReviewContext context)
         {
             _context = context;
         }
 
-        // GET: Cart
+        // GET: Review
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Cart.ToListAsync());
+            return View(await _context.Review.ToListAsync());
         }
 
-        // GET: Cart/Details/5
+        // GET: Review/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -35,41 +33,39 @@ namespace seniorProject.Controllers
                 return NotFound();
             }
 
-            var cart = await _context.Cart
+            var review = await _context.Review
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (cart == null)
+            if (review == null)
             {
                 return NotFound();
             }
 
-            return View(cart);
+            return View(review);
         }
 
-        //GET: Cart/Create
-        public IActionResult Create(string UserId, float ProductId, string ProductImg, float ProductPrice, string ProductName)
+        // GET: Review/Create
+        public IActionResult Create()
         {
-            ViewBag.Message = ProductId;
             return View();
         }
 
-        // POST: Cart/Create
+        // POST: Review/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Cart cart)
+        public async Task<IActionResult> Create([Bind("Id,UserId,ProductReview,ProductRating")] Review review)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(cart);
+                _context.Add(review);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("ViewCart", "Account");
+                return RedirectToAction(nameof(Index));
             }
-             return RedirectToAction("ViewCart", "Account");
+            return View(review);
         }
 
-        // GET: Cart/Edit/5
+        // GET: Review/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -77,22 +73,22 @@ namespace seniorProject.Controllers
                 return NotFound();
             }
 
-            var cart = await _context.Cart.FindAsync(id);
-            if (cart == null)
+            var review = await _context.Review.FindAsync(id);
+            if (review == null)
             {
                 return NotFound();
             }
-            return View(cart);
+            return View(review);
         }
 
-        // POST: Cart/Edit/5
+        // POST: Review/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,UserId,ProductId,ProductImg,ProductPrice,ProductName")] Cart cart)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserId,ProductReview,ProductRating")] Review review)
         {
-            if (id != cart.Id)
+            if (id != review.Id)
             {
                 return NotFound();
             }
@@ -101,12 +97,12 @@ namespace seniorProject.Controllers
             {
                 try
                 {
-                    _context.Update(cart);
+                    _context.Update(review);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CartExists(cart.Id))
+                    if (!ReviewExists(review.Id))
                     {
                         return NotFound();
                     }
@@ -117,10 +113,10 @@ namespace seniorProject.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(cart);
+            return View(review);
         }
 
-        // GET: Cart/Delete/5
+        // GET: Review/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -128,54 +124,34 @@ namespace seniorProject.Controllers
                 return NotFound();
             }
 
-            var cart = await _context.Cart
+            var review = await _context.Review
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (cart == null)
+            if (review == null)
             {
                 return NotFound();
             }
 
-            return View();
+            return View(review);
         }
 
-        // POST: Cart/Delete/5
+        // POST: Review/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var cart = await _context.Cart.FindAsync(id);
-            if (cart != null)
+            var review = await _context.Review.FindAsync(id);
+            if (review != null)
             {
-                _context.Cart.Remove(cart);
+                _context.Review.Remove(review);
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("ViewCart", "Account");
+            return RedirectToAction(nameof(Index));
         }
 
-        private bool CartExists(int id)
+        private bool ReviewExists(int id)
         {
-            return _context.Cart.Any(e => e.Id == id);
+            return _context.Review.Any(e => e.Id == id);
         }
-
-        public async Task<IActionResult> UserCart(string? UserId)
-        {
-            if (UserId == null)
-            {
-                return NotFound();
-            }
-
-            var cart = await _context.Cart
-                .Where(m => m.UserId == UserId).ToListAsync();
-            if (cart == null)
-            {
-                return NotFound();
-            }
-            return View(cart);
-    
-        }
-
-
-        
     }
 }

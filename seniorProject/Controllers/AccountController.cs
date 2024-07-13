@@ -7,6 +7,7 @@ using seniorProject.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using Microsoft.AspNet.Identity;
+using SeniorProject.Models;
 
 
 
@@ -29,16 +30,46 @@ public class AccountController : Controller
     );
   }
 
-  [Authorize]
-  public IActionResult AddToCart(int Id)
+public string checkLoginStatus()
+{
+  ViewBag.Check = "Login";
+  
+  string check = User.Identity.GetUserId();
+
+  if (check != null){
+    ViewBag.Check = "Logout";
+    return ViewBag.Check;
+  }
+  else{
+   ViewBag.Check = "Login";
+    return ViewBag.Check;
+  }
+}  
+[Authorize]
+  public IActionResult AddToCart(int Id, string Img, float Price, string Name)
   {
-    
+    var c = new Cart{
+      ProductId = Id,
+      UserId = User.Identity.GetUserId(),
+      ProductImg = Img,
+      ProductPrice = Price,
+      ProductName = Name};
+
     return RedirectToAction(
     
-    "Create","Cart", new{
-      UserId = User.Identity.GetUserId(),
-      ProductId = Id
-    }
+    "Create","Cart", c
+    
+  );
+  }
+
+  [Authorize]
+  public IActionResult ViewCart()
+  {
+  
+
+    return RedirectToAction(
+    
+    "UserCart","Cart",new {UserId = User.Identity.GetUserId()} 
     
   );
   }

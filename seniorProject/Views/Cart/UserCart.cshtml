@@ -1,0 +1,25 @@
+@model IEnumerable<SeniorProject.Models.Cart>
+
+@{
+    ViewData["Title"] = "UserCart";
+    @* float total;
+    foreach(var product in Model ){
+        total += product.ProductPrice;
+    } *@
+}
+@foreach (var item in Model) {
+        <div class="cartProduct">
+            <img class ="cart-img" src='~/Assets/@Html.DisplayFor(modelItem => item.ProductImg)'>
+            <div>
+            @Html.DisplayFor(modelItem => item.ProductName)
+            </div>
+            <div>
+            $@Html.DisplayFor(modelItem => item.ProductPrice)
+            </div>
+            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            
+   </div>   
+}
+
+<h4 class='cart-total'>Total: $@Model.Sum(i => i.ProductPrice)</h4>
+

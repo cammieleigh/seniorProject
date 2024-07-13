@@ -80,7 +80,7 @@ body {
   width: 60%;
   margin: 0;
   margin-left: 60px;
-  font-size: 1.5em;
+  font-size: 2vw;
 }
 
 .product-img{
@@ -95,4 +95,52 @@ body {
   margin: 20px;
   font-size: 1.25em;
   text-align: center;
+  padding-top: 10px;
 }
+
+.singleProduct{
+  display: flex;
+  justify-content: space-evenly;
+  width: 55vw;
+  color: #2e2c39;
+  font-family: "Montserrat";
+  text-align: center;
+  margin: auto;
+}
+
+.add-to-cart{
+  background-color: #f1bfc0;
+  color: #2e2c39;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.cartProduct{
+  color: #2e2c39;
+  margin: auto;
+  margin-bottom: 20px;
+  border-bottom: 2px solid RGBA(46, 44, 57, .25);
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  padding-bottom: 20px;
+  width: 75vw;
+}
+
+.cart-img{
+  width: 100px;
+  height: auto;
+}
+
+.cart-total{
+  text-align: right;
+  margin-right: 60px;
+}
+
+.navbar-toggler-icon {
+background-color: black;  }

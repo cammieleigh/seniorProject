@@ -17,115 +17,143 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = seniorProject
 build_property.RootNamespace = seniorProject
-build_property.ProjectDir = C:\Users\cammi\Documents\seniorProject-1\seniorProject\
+build_property.ProjectDir = c:\Users\cammi\Documents\seniorProject-1\seniorProject\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\cammi\Documents\seniorProject-1\seniorProject
+build_property.MSBuildProjectDirectory = c:\Users\cammi\Documents\seniorProject-1\seniorProject
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Components/CartComponent.razor]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Components/CartComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXJ0Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Cart/Create.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Cart/AddProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxBZGRQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Cart/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Cart/Delete.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Cart/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Cart/Details.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Cart/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Cart/Edit.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Cart/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Cart/Index.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Helloworld/Index.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Cart/UserCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxVc2VyQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Helloworld/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG93b3JsZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Home/Index.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Home/Privacy.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/Create.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/Delete.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/Details.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/Edit.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/Index.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/ProductPage.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/ProductPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/Show.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Product/Show.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTaG93LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Shared/Error.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Review/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Review/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Review/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Review/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Review/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/User/Create.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/User/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/User/Delete.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/User/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/User/Details.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/User/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/User/Edit.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/User/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/User/Index.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/_ViewImports.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/_ViewStart.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Shared/_Layout.cshtml]
+[c:/Users/cammi/Documents/seniorProject-1/seniorProject/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-bfj3bh02wh

@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using SeniorProject.Models;
 
+
 namespace seniorProject.Controllers
 {
     public class ProductController : Controller
@@ -54,7 +55,7 @@ namespace seniorProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Price,Color,Img")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,Name,Price,Color,Img, reviews")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +87,7 @@ namespace seniorProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Price,Color,Img")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Price,Color,Img, reviews")] Product product)
         {
             if (id != product.Id)
             {
@@ -153,9 +154,21 @@ namespace seniorProject.Controllers
         {
             return _context.Product.Any(e => e.Id == id);
         }
-          public async Task<IActionResult> ProductPage()
+          public async Task<IActionResult> ProductPage(string? value)
     {
-        return View(await _context.Product.ToListAsync());
+      if(value == "priceDesc"){
+            return View(await _context.Product.OrderByDescending(x=> x.Price).ToListAsync());
+      }
+      else if (value == "priceAsc"){
+        return View(await _context.Product.OrderBy(x=> x.Price).ToListAsync());
+      }
+      else if(value == "createdDesc"){
+        return View(await _context.Product.OrderByDescending(x=> x.Id).ToListAsync());
+      }
+      else{
+        return View(await _context.Product.OrderBy(x=> x.Id).ToListAsync());
+      }
+        
     }
  
         public async Task<IActionResult> Show(int? id)
@@ -174,6 +187,8 @@ namespace seniorProject.Controllers
 
             return View(product);
             }
+
+            
         }
     }
 

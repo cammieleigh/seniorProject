@@ -1,22 +1,38 @@
-@model IEnumerable<SeniorProject.Models.Product>
+@model IEnumerable<SeniorProject.Models.Product>;
+@using SeniorProject.Models;
 
+@{
+   List<Option> options = new List<Option> {
+    new Option {Value = "createdDesc", Text="Newest to Oldest"},
+    new Option {Value = "priceDesc", Text="Price Highest to Lowest"},
+    new Option {Value = "priceAsc", Text="Price Lowest to Highest"},
+    new Option {Value = "createdAsc", Text="Oldest to Newest"}
+    };
+    SelectList selectList = new SelectList(options, "Value", "Text");
+
+}
+
+@using (Html.BeginForm())
+{
+@Html.DropDownList("value", selectList as SelectList, "Order By", htmlAttributes: new { onchange = "this.form.submit()" })
+}
 <div class="row">
     <div class="col-lg-6 col-sm-8">
         <div class="row">
 @foreach (var item in Model) {
-        <div class="product-container col-sm-4">
-            <div class="col-sm-4">
+        <div class="product-container col-sm-4 flex-sm">
+            <div class="col-sm-12">
                 <a asp-action="Show" asp-route-id="@item.Id"><img class ="img-fluid product-img" src='~/Assets/@Html.DisplayFor(modelItem => item.Img)'>
                 </a>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-12">
                 @Html.DisplayFor(modelItem => item.Name)
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-12">
                 @Html.DisplayFor(modelItem => item.Color)
             </div>
-            <div class="col-sm-4">
-                @Html.DisplayFor(modelItem => item.Price)
+            <div class="col-sm-12">
+                $@Html.DisplayFor(modelItem => item.Price)
             </div>
      </div>
 }

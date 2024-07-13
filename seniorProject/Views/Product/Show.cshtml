@@ -1,26 +1,44 @@
-@model SeniorProject.Models.Product
 
-        <div class="container col-sm-4">
-            <div class="col-sm-4">
-                @Html.DisplayFor(model => model.Name)
-            </div>
-            <div class="col-sm-4">
-                @Html.DisplayFor(model => model.Price)
-            </div>
-            <div class="col-sm-4">
-                @Html.DisplayFor(model => model.Color)
-            </div>
-            <div class="col-sm-4">
-                @Html.DisplayFor(model => Model.Id)
-            </div>
-            <div class="col-sm-4">
+@model SeniorProject.Models.Product
+@using seniorProject.Models
+
+@{
+    ViewData["Title"] = "Show";
+}
+
+
+@{
+    int ProductId = @Model.Id;
+    ViewBag.Parameter = ProductId;
+}
+    <div class="singleProduct">
+        <div >
                 <img class ="product-img" src='~/Assets/@Html.DisplayFor(model => model.Img)'>
             </div>
+        <div class="col-sm-4">
+            <h1 class="col-sm-12">
+                @Html.DisplayFor(model => model.Name)
+            </h1>
+           
+            <h2 class="col-sm-12">
+                @Html.DisplayFor(model => model.Color)
+            </h2>
+             <h2 class="col-sm-12">
+                $@Html.DisplayFor(model => model.Price)
+            </h2>
+            
+            <div class="col-sm-12">
+                    <a class="add-to-cart" asp-controller="Account" asp-action="AddToCart" asp-route-Id="@Model.Id" asp-route-Price="@Model.Price" asp-route-Img="@Model.Img" asp-route-Name="@Model.Name">Add to Cart</a> 
+            </div>
+            @* <partial name="../Review/Index.cshtml" model="Model.Reviews" /> *@
      </div>
-<div>
-    <a asp-controller="Account" asp-action="AddToCart" asp-route-Id="@Model.Id">Add to Cart</a> |
-</div>
+     @{
+        @* foreach (var review in Model.Reviews){ *@
 
-@section Scripts{
+        Html.Partial("../Review/Index.cshtml");
+     }
+     </div>
+
+@{
 
 }

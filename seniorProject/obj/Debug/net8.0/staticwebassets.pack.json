@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\Assets\\homePic.jpg"
     },
     {
+      "Id": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\wwwroot\\Assets\\menuIcon.png",
+      "PackagePath": "staticwebassets\\Assets\\menuIcon.png"
+    },
+    {
       "Id": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

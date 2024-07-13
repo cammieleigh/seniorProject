@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aoT0Gc8yeJ0YOj0FF4n49UwV0QC/g0E82gGS/h2E4qg=",
+  "Hash": "OLVFmW/AaSd20wSBugGfM4VRrSpbA/TxFIjaX4XTocc=",
   "Source": "seniorProject",
   "BasePath": "_content/seniorProject",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\homePic.jpg"
+    },
+    {
+      "Identity": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\wwwroot\\Assets\\menuIcon.png",
+      "SourceId": "seniorProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\wwwroot\\",
+      "BasePath": "_content/seniorProject",
+      "RelativePath": "Assets/menuIcon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\menuIcon.png"
     },
     {
       "Identity": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\wwwroot\\css\\site.css",

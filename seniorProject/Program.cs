@@ -5,9 +5,12 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Auth0.AspNetCore.Authentication;
 using Carts.Data;
+using Reviews.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ReviewContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ReviewContext") ?? throw new InvalidOperationException("Connection string 'ReviewContext' not found.")));
 
 builder.Services.AddDbContext<CartContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CartContext") ?? throw new InvalidOperationException("Connection string 'CartContext' not found.")));
