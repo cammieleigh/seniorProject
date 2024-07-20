@@ -1,7 +1,19 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    @using Microsoft.AspNet.Identity;
+    string loginState = "";
+    if (@User.Identity.GetUserId() == null){
+        loginState = "popup-collapse";
+    }
+    else{
+        loginState = "d-none popup-collapse";
+    }
 }
-
+<div class="@loginState">
+    <button type="button" data-bs-toggle="collapse" data-bs-target=".popup-collapse">x</button>
+    New here? Sign up for an account and get 10% off your first order!
+<a class="nav-link nav-color" asp-area="" asp-controller="Account" asp-action="Login">Sign up Here!</a>
+</div>
 <div class="d-flex justify-content-center">
 <img class="img-fluid img-style" src="~/Assets/creamPink.jpg">
 <div class="decorative-div">

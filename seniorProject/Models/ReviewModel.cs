@@ -8,6 +8,6 @@ public class Review
     public string? UserId {get; set;}
     public string? ProductReview {get; set;}
     public int? ProductRating {get; set;}
-    
+    public int? productId {get; set;}
 
 }

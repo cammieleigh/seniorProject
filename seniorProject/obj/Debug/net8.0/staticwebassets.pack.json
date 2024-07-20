@@ -17,8 +17,24 @@
       "PackagePath": "staticwebassets\\Assets\\homePic.jpg"
     },
     {
+      "Id": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\wwwroot\\Assets\\kidsBlanket.jpg",
+      "PackagePath": "staticwebassets\\Assets\\kidsBlanket.jpg"
+    },
+    {
       "Id": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\wwwroot\\Assets\\menuIcon.png",
       "PackagePath": "staticwebassets\\Assets\\menuIcon.png"
+    },
+    {
+      "Id": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\wwwroot\\Assets\\queenBlanket.jpg",
+      "PackagePath": "staticwebassets\\Assets\\queenBlanket.jpg"
+    },
+    {
+      "Id": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\wwwroot\\Assets\\stripeQueen.jpg",
+      "PackagePath": "staticwebassets\\Assets\\stripeQueen.jpg"
+    },
+    {
+      "Id": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\wwwroot\\Assets\\twinBlanket.jpg",
+      "PackagePath": "staticwebassets\\Assets\\twinBlanket.jpg"
     },
     {
       "Id": "c:\\Users\\cammi\\Documents\\seniorProject-1\\seniorProject\\wwwroot\\css\\site.css",

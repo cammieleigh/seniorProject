@@ -1,6 +1,7 @@
 
 @model SeniorProject.Models.Product
-@using seniorProject.Models
+@using SeniorProject.Models
+
 
 @{
     ViewData["Title"] = "Show";
@@ -35,7 +36,7 @@
      @{
         @* foreach (var review in Model.Reviews){ *@
 
-        Html.Partial("../Review/Index.cshtml");
+        Html.Partial("../Review/Index.cshtml", new Review()); 
      }
      </div>
 

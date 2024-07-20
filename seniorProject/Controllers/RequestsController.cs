@@ -5,27 +5,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Reviews.Data;
 using SeniorProject.Models;
+using seniorProject.Data;
 
 namespace seniorProject.Controllers
 {
-    public class ReviewController : Controller
+    public class RequestsController : Controller
     {
-        private readonly ReviewContext _context;
+        private readonly RequestContext _context;
 
-        public ReviewController(ReviewContext context)
+        public RequestsController(RequestContext context)
         {
             _context = context;
         }
 
-        // GET: Review
+        // GET: Requests
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Review.ToListAsync());
+            return View(await _context.Request.ToListAsync());
         }
 
-        // GET: Review/Details/5
+        // GET: Requests/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,40 +33,39 @@ namespace seniorProject.Controllers
                 return NotFound();
             }
 
-            var review = await _context.Review
+            var request = await _context.Request
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (review == null)
+            if (request == null)
             {
                 return NotFound();
             }
 
-            return View(review);
+            return View(request);
         }
 
-        // GET: Review/Create
+        // GET: Requests/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Review/Create
+        // POST: Requests/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,UserId,ProductReview,ProductRating")] Review review)
+        public async Task<IActionResult> Create([Bind("Id,UserEmail,ProductRequest")] Request request)
         {
-            Console.WriteLine("in create statement");
             if (ModelState.IsValid)
             {
-                _context.Add(review);
+                _context.Add(request);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(review);
+            return View(request);
         }
 
-        // GET: Review/Edit/5
+        // GET: Requests/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,22 +73,22 @@ namespace seniorProject.Controllers
                 return NotFound();
             }
 
-            var review = await _context.Review.FindAsync(id);
-            if (review == null)
+            var request = await _context.Request.FindAsync(id);
+            if (request == null)
             {
                 return NotFound();
             }
-            return View(review);
+            return View(request);
         }
 
-        // POST: Review/Edit/5
+        // POST: Requests/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,UserId,ProductReview,ProductRating")] Review review)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserEmail,ProductRequest")] Request request)
         {
-            if (id != review.Id)
+            if (id != request.Id)
             {
                 return NotFound();
             }
@@ -98,12 +97,12 @@ namespace seniorProject.Controllers
             {
                 try
                 {
-                    _context.Update(review);
+                    _context.Update(request);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ReviewExists(review.Id))
+                    if (!RequestExists(request.Id))
                     {
                         return NotFound();
                     }
@@ -114,10 +113,10 @@ namespace seniorProject.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(review);
+            return View(request);
         }
 
-        // GET: Review/Delete/5
+        // GET: Requests/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -125,34 +124,34 @@ namespace seniorProject.Controllers
                 return NotFound();
             }
 
-            var review = await _context.Review
+            var request = await _context.Request
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (review == null)
+            if (request == null)
             {
                 return NotFound();
             }
 
-            return View(review);
+            return View(request);
         }
 
-        // POST: Review/Delete/5
+        // POST: Requests/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var review = await _context.Review.FindAsync(id);
-            if (review != null)
+            var request = await _context.Request.FindAsync(id);
+            if (request != null)
             {
-                _context.Review.Remove(review);
+                _context.Request.Remove(request);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ReviewExists(int id)
+        private bool RequestExists(int id)
         {
-            return _context.Review.Any(e => e.Id == id);
+            return _context.Request.Any(e => e.Id == id);
         }
     }
 }

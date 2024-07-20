@@ -16,11 +16,12 @@
 {
 @Html.DropDownList("value", selectList as SelectList, "Order By", htmlAttributes: new { onchange = "this.form.submit()" })
 }
-<div class="row">
-    <div class="col-lg-6 col-sm-8">
-        <div class="row">
+<div>Want a customized blanket? Fill out a form <a asp-controller="Requests" asp-action="CustomerCreate">here</a>!</div>
+<div class="row product-grid">
+    <div class="col-lg-12 col-sm-12">
+        <div class="row product-grid">
 @foreach (var item in Model) {
-        <div class="product-container col-sm-4 flex-sm">
+        <div class="product-container col-sm-3 flex-sm">
             <div class="col-sm-12">
                 <a asp-action="Show" asp-route-id="@item.Id"><img class ="img-fluid product-img" src='~/Assets/@Html.DisplayFor(modelItem => item.Img)'>
                 </a>

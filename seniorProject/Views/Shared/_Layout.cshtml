@@ -49,9 +49,6 @@
                             <a class="nav-link nav-color" asp-area="" asp-controller="Product" asp-action="ProductPage" asp-route-Value="createdDesc">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color" asp-area="" asp-controller="Home" asp-action="Privacy">Contact</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link nav-color" asp-area="" asp-controller="Account" asp-action="ViewCart">Cart</a>
                         </li>
                         <li class="nav-item">
@@ -59,6 +56,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="@adminLink" asp-area="" asp-controller="Product" asp-action="Index">Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="@adminLink" asp-area="" asp-controller="Requests" asp-action="Index">Requests</a>
                         </li>
                       
                     </ul>

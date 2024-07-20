@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace seniorProject.Migrations.Review
+namespace seniorProject.Migrations.Request
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -11,18 +11,17 @@ namespace seniorProject.Migrations.Review
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Review",
+                name: "Request",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProductReview = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProductRating = table.Column<int>(type: "int", nullable: true)
+                    UserEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProductRequest = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Review", x => x.Id);
+                    table.PrimaryKey("PK_Request", x => x.Id);
                 });
         }
 
@@ -30,7 +29,7 @@ namespace seniorProject.Migrations.Review
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Review");
+                name: "Request");
         }
     }
 }

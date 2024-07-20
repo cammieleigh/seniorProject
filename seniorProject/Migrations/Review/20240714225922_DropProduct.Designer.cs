@@ -12,8 +12,8 @@ using Reviews.Data;
 namespace seniorProject.Migrations.Review
 {
     [DbContext(typeof(ReviewContext))]
-    [Migration("20240712040259_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240714225922_DropProduct")]
+    partial class DropProduct
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,6 +41,9 @@ namespace seniorProject.Migrations.Review
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("productId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
